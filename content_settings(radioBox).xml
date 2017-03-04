@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.admin.sportaplication.Settings"
+    tools:showIn="@layout/activity_settings">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Male/Female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/MaleOrFemale"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="24sp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp">
+
+            <RadioButton
+                android:text="Male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Male"
+                android:layout_below="@+id/MaleOrFemale"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Female"
+                android:layout_alignBaseline="@+id/Male"
+                android:layout_alignBottom="@+id/Male"
+                android:layout_toRightOf="@+id/MaleOrFemale"
+                android:layout_toEndOf="@+id/MaleOrFemale"
+                android:checked="false"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Enter your age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/AgeText"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="105dp"
+            android:textSize="24sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="5"
+            android:id="@+id/Age"
+            android:layout_marginTop="30dp"
+            android:text="Here..."
+            android:layout_below="@+id/AgeText"
+            android:layout_alignLeft="@+id/AgeText"
+            android:layout_alignStart="@+id/AgeText"
+            android:shadowRadius="20" />
+
+        <Button
+            android:text="Ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/AcceptAge"
+            android:layout_alignTop="@+id/Age"
+            android:layout_toRightOf="@+id/Age"
+            android:minWidth="50dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Enter your weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/WeightText"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="24sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="5"
+            android:id="@+id/Weight"
+            android:layout_below="@+id/WeightText"
+            android:layout_alignLeft="@+id/WeightText"
+            android:layout_alignStart="@+id/WeightText"
+            android:layout_marginTop="19dp"
+            android:text="Here..." />
+
+        <Button
+            android:text="Ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/AcceptWeight"
+            android:minWidth="80dp"
+            android:layout_alignTop="@+id/Weight"
+            android:layout_toRightOf="@+id/Weight"
+            android:layout_toEndOf="@+id/Weight" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Choose your phys power"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/PhysText"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="113dp"
+            android:textSize="24sp" />
+
+        <RadioGroup
+            android:layout_height="100dp"
+            android:id="@+id/RadioButtPhys"
+            android:layout_width="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <RadioButton
+                android:text="Bad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/PhysNormal"
+                android:layout_alignBottom="@+id/PhysNormal"
+                android:layout_alignLeft="@+id/PhysText"
+                android:layout_alignStart="@+id/PhysText"
+                android:id="@+id/PhysBad" />
+
+            <RadioButton
+            android:text="Good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/PhysGood"
+            android:layout_alignBaseline="@+id/PhysNormal"
+            android:layout_alignBottom="@+id/PhysNormal"
+            android:layout_alignRight="@+id/PhysText"
+            android:layout_alignEnd="@+id/PhysText" />
+
+            <RadioButton
+            android:text="Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/PhysNormal"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+</RelativeLayout>
